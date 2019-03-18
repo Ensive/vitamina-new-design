@@ -1,0 +1,18 @@
+.Link {
+
+  //&.is-active {}
+}
+
+.Link.Link--navigation {
+
+  &.is-active {}
+}
+
+.Link.Link--filter {
+
+  &.is-active {}
+}
+
+.Link.Link--block {
+  display: block;
+}

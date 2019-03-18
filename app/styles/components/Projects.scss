@@ -1,0 +1,22 @@
+.Projects {}
+
+// Project
+.Project {
+  &:hover,
+  &:focus {}
+
+  &.is-active {}
+}
+.Project__heading {}
+.Project__photo {}
+
+// Project info
+.Project__info {}
+
+.Project__title {}
+.Project__lang {}
+
+.Project__meta {}
+.Project__tags {}
+.Project__tag {}
+.Project__year {}
