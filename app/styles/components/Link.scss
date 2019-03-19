@@ -10,6 +10,11 @@
   color: $grey;
   position: relative;
 
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -39,6 +44,10 @@
   padding: 20px 0;
   border-bottom: 2px solid transparent;
   transition: all 0.1s;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
 
   &.is-active {
     color: $black;

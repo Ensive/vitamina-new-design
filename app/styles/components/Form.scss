@@ -1,0 +1,31 @@
+.Form {
+  margin-top: 90px;
+}
+
+.Form__label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 30px;
+  margin-bottom: 15px;
+}
+
+.Form__input {
+  width: 100%;
+  outline: 0;
+  font-size: 16px;
+  border: 0;
+  height: 35px;
+  border-bottom: 1px solid $black;
+  font-weight: normal;
+
+  &:focus,
+  &:active {
+    border-bottom: 2px solid $orange;
+  }
+}
+
+.Form__input--text-area {
+  height: 255px;
+  padding-top: 10px;
+}

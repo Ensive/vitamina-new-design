@@ -1,10 +1,11 @@
 .Content {
   position: relative;
+  padding: 90px 94px 47px;
 }
 
 .Content__title {
   max-width: 714px;
-  margin: 64px auto 50px;
+  margin: 0 auto 50px;
   text-align: center;
   font-size: 48px;
   line-height: 1.4;
@@ -69,10 +70,18 @@
 // social
 .Content__links {
   position: absolute;
-  top: 707px;
+  top: 793px;
   width: 24px;
   height: 216px;
-  left: 0;
+  left: 90px;
+}
+
+.Content__links--comunity {
+  display: flex;
+  justify-content: space-between;
+  position: static;
+  width: 100%;
+  max-width: 190px;
 }
 
 .Content__link {
@@ -85,6 +94,10 @@
   &:hover {
     filter: brightness(0%);
   }
+}
+
+.Content__link--comunity {
+  filter: brightness(0%);
 }
 
 .Content__link--facebook {
@@ -179,3 +192,27 @@
   }
 }
 
+.Content__contacts {
+  max-width: 234px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  max-height: 170px;
+  margin-top: 120px;
+
+  .Content__subtitle {
+    margin-bottom: 25px;
+  }
+}
+
+.Content__contact {
+  line-height: 1.8;
+  color: $black;
+  display: block;
+  text-decoration: none;
+  transition: color 0.1s;
+
+  &:hover {
+    color: $orange;
+  }
+}
