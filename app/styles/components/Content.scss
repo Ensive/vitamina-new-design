@@ -1,29 +1,181 @@
-.Content {}
-.Content__title {}
-.Content__image {}
-.Content__slider {}
-.Content__subtitle {}
+.Content {
+  position: relative;
+}
+
+.Content__title {
+  max-width: 714px;
+  margin: 64px auto 50px;
+  text-align: center;
+  font-size: 48px;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.Content__image {
+  width: 901px;
+  height: 424px;
+  object-fit: cover;
+}
+
+.Content__slider {
+  position: relative;
+  margin:  0 auto;
+  max-width: 901px;
+
+  &::before {
+    content: '';
+    width: 100%;
+    max-width: 714px;
+    height: 1px;
+    background-color: $black;
+    bottom: -50px;
+  }
+}
+
+.Content__details {
+  max-width: 714px;
+  width: 100%;
+  margin: 90px auto 0;
+}
+
+.Content__subtitle {
+  font-size: 18px;
+  font-weight: bold;
+}
 
 // text
-.Content__text {}
-.Content__text--underlined {}
-.Content__text--emphasized {}
+.Content__text {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.89;
+}
+
+.Content__text--underlined {
+  color: $black;
+  text-decoration: none;
+  border-bottom: 2px $orange solid;
+  transition: color 0.1s;
+
+  &:hover {
+    color: $orange;
+  }
+}
+
+.Content__text--emphasized {
+  background-color: $orange;
+  color: $black;
+}
 
 // social
-.Content__links {}
-.Content__link {}
-.Content__link--facebook {}
-.Content__link--twitter {}
-.Content__link--download {}
+.Content__links {
+  position: absolute;
+  top: 707px;
+  width: 24px;
+  height: 216px;
+  left: 0;
+}
 
-.Content__tag {}
-.Content__tag--year {}
+.Content__link {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 42px;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0%);
+  }
+}
+
+.Content__link--facebook {
+  background: url("../images/facebook.svg") no-repeat center;
+}
+
+.Content__link--twitter {
+  background: url("../images/twitter.svg") no-repeat center;
+}
+
+.Content__link--post {
+  background: url("../images/envelope.svg") no-repeat center;
+}
+
+.Content__link--download {
+  background: url("../images/download.svg") no-repeat center;
+}
+
+.Content__tags {
+  margin-top: 100px;
+}
+
+.Content__tag {
+  display: inline-block;
+  width: 134px;
+  font-size: 18px;
+  text-align: center;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: $grey;
+  margin-right: 32px;
+  border: 1px solid #C4C4C4;
+}
+
+.Content__tag--year {
+  width: 88px;
+  margin-left: auto;
+  float: right;
+}
 
 // Meta
-.Meta {}
-.Meta__item {}
-.Meta__label {}
-.Meta__list {}
+.Meta {
+  margin-top: 65px;
+  font-weight: 300;
+}
 
-.Content__download {}
+.Meta__item {
+  border-top: 1px solid $black;
+  padding: 25px 0;
+  font-size: 18px;
+}
+
+.Meta__label {
+  font-weight: bold;
+  margin-right: 3px;
+}
+
+.Meta__list {
+  display: block;
+  color: $black;
+  text-decoration: underline;
+  margin-top: 25px;
+}
+
+.Content__download {
+  width: 100%;
+  border: 2px solid $orange;
+  margin-top: 60px;
+  padding: 38px 24px;
+  position: relative;
+  font-size: 18px;
+  text-align: left;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba($orange, 0.2);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: url("../images/download.svg") no-repeat center;
+    width: 26px;
+    height: 16px;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: brightness(0);
+  }
+}
 
