@@ -1,7 +1,17 @@
-@import 'components/';
+@import "../../node_modules/reset-css/reset";
 
-body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
-}
+
+@import "base/colors";
+@import "base/fonts";
+@import "base/Container";
+@import "base/common";
+
+@import "components/Button";
+@import "components/Header";
+@import "components/Window";
+@import "components/Content";
+@import "components/ContactWidget";
+@import "components/Link";
+@import "components/Projects";
+@import "components/Language";
+@import "components/FIlter";

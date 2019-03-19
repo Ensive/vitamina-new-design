@@ -1,22 +1,79 @@
-.Projects {}
+.Projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 47px;
+}
 
 // Project
 .Project {
-  &:hover,
-  &:focus {}
+  flex: 1 0 auto;
+  max-width: 331px;
+  height: 392px;
+  margin-bottom: 46px;
+  margin-right: 48px;
+  border: 4px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
 
-  &.is-active {}
+  &:hover,
+  &:focus {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);;
+  }
+
+  &.is-active {
+    border: 4px solid $orange;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 }
-.Project__heading {}
-.Project__photo {}
+
+.Project__heading {
+
+}
+
+.Project__photo {
+  display: block;
+  width: 100%;
+  height: 272px;
+  object-fit: cover;
+}
 
 // Project info
-.Project__info {}
+.Project__info {
+  padding: 10px 15px;
+  position: relative;
+  font-size: 14px;
+  color: $grey;
+}
 
-.Project__title {}
-.Project__lang {}
+.Project__title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  max-width: 251px;
+  padding: 5px 0;
+  height: 60px;
+  color: $black;
+  line-height: 1.4;
+}
 
-.Project__meta {}
+.Project__lang {
+  position: absolute;
+  right: 15px;
+  top: 35px;
+  text-transform: uppercase;
+}
+
+.Project__meta {
+  border-top: 1px solid $grey;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
 .Project__tags {}
 .Project__tag {}
 .Project__year {}

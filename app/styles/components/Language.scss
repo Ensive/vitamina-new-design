@@ -1,4 +1,60 @@
-.Language {}
-.Language__button {}
-.Language__dropdown {}
-.Language__link {}
+.Language {
+  margin-left: 32px;
+  position: relative;
+}
+
+.Language__button {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  border: 0;
+  padding-right: 15px;
+  cursor: pointer;
+  position: relative;
+  outline: 0;
+
+  &.is-active {
+
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background: url("../images/arrow-down.svg") no-repeat center;
+    width: 7px;
+    height: 5px;
+    transition: transform 0.4s;
+  }
+}
+
+.Language__dropdown {
+  position: absolute;
+  transform: scaleY(0);
+  left: 7px;
+  top: 18px;
+  transform-origin: top;
+  transition: transform 0.3s;
+
+  &.is-active {
+    transform: scaleY(1);
+  }
+}
+
+.Language__link {
+  display: block;
+  margin-top: 4px;
+  color: $grey;
+  text-decoration: none;
+  //font-weight: bold;
+  font-size: 14px;
+  transition: color 0.1s;
+
+  &:hover {
+    color: $orange;
+  }
+}

@@ -1,1 +1,17 @@
-.Container {}
+.Container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.Container--header,
+.Container--filter {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.Container--filter {
+  justify-content: space-between;
+}

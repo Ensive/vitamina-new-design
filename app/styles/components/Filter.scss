@@ -1,5 +1,30 @@
-.Filter {}
-.Filter__icon {}
-.Filter__label {}
-.Filter__items {}
-.Filter__reset {}
+.Filter {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
+  height: 56px;
+}
+
+.Filter__icon {
+
+}
+
+.Filter__label {
+  font-weight: bold;
+  font-size: 14px;
+  padding-left: 30px;
+  background: url("../images/filter.svg") no-repeat left;
+}
+
+.Filter__items {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Filter__reset {
+  border: 0;
+  background: url("../images/reset-filter.svg") no-repeat center;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+}
