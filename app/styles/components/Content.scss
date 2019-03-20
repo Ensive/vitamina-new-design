@@ -99,6 +99,11 @@
 
 .Content__link--comunity {
   filter: brightness(0%);
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .Content__link--facebook {
