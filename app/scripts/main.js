@@ -10,3 +10,14 @@ $(function () {
     $langMenu.toggleClass('is-active');
   }
 });
+
+$(function () {
+  const $widgetButton = $('.js-widget-button');
+  const $widgetMenu = $('.js-widget-menu');
+
+  $widgetButton.on('click', toggleWidgetMenu);
+
+  function toggleWidgetMenu() {
+    $widgetMenu.toggleClass('is-active')
+  }
+});

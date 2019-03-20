@@ -1,10 +1,60 @@
-.ContactWidget {}
-.ContactWidget__button {}
-.ContactWidget__icon {}
+.ContactWidget {
+  position: fixed;
+  display: block;
+  border-radius: 50%;
+  right: 136px;
+  bottom: 88px;
+}
 
+.ContactWidget__button {
+  box-shadow: 0 10px 15px rgba($grey, 0.2);
+  border-radius: 50%;
+  border: 0;
+  width: 80px;
+  outline: none;
+  height: 80px;
+  background: #F5F5F5 url("../images/dialog.svg") no-repeat center;
+}
+
+.ContactWidget__menu{
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  height: 232px;
+  border-radius: 72px;
+  background: #fff;
+  padding: 32px 0;
+  box-shadow: 0 10px 15px rgba($grey, 0.2);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  &.is-active {
+    opacity: 1;
+  }
+}
 // link
-.ContactWidget__link {}
-.ContactWidget__link--messenger {}
-.ContactWidget__link--contact {}
+.ContactWidget__link {
+  width: 28px;
+  height: 28px;
+  margin: 0 auto 28px;
+  display: block;
+  transition: transform 0.2s;
 
-.ContactWidget__close {}
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.ContactWidget__link--messenger {
+  background: url("../images/dialog.svg") no-repeat center;
+}
+
+.ContactWidget__link--contact {
+  background: url("../images/opened-envelope.svg") no-repeat center;
+}
+
+.ContactWidget__link--close {
+  background: url("../images/close.svg") no-repeat center;
+  margin-top: 68px;
+}
