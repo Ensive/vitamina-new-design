@@ -9,6 +9,7 @@
   <!-- Place favicon.ico in the root directory -->
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
   <!-- endbuild -->
 </head>
 <body>
@@ -60,9 +61,21 @@
     <button class="Window__close"></button>
     <div class="Content">
       <h1 class="Content__title">Strategia de dezvoltare spaţială Timişoara</h1>
-      <div class="Content__slider">
-        <img src="images/content-img.png" alt="project-img" class="Content__image">
+      <div class="Slider">
+        <div class="js-slider">
+          <img src="images/content-img.png" alt="project-img" class="Content__image js-slide">
+          <img src="images/content-img.png" alt="project-img" class="Content__image js-slide">
+          <img src="images/content-img.png" alt="project-img" class="Content__image js-slide">
+          <img src="images/content-img.png" alt="project-img" class="Content__image js-slide">
+          <img src="images/content-img.png" alt="project-img" class="Content__image js-slide">
+        </div>
+        <div class="Slider__state">
+          <span class="Slider__index Slider__index--current js-current-slide">1</span>
+          <span class="Slider__index">/</span>
+          <span class="Slider__index js-slides-count">2</span>
+        </div>
       </div>
+
       <div class="Content__details">
         <div class="Content__subtitle">Descriere</div>
         <div class="Content__text">
@@ -155,7 +168,7 @@
         </div>
       </figcaption>
     </figure>
-    <figure class="Project">
+    <figure class="Project is-active">
       <img src="./images/project-photo.png" alt="project-photo" class="Project__photo">
       <figcaption class="Project__info">
         <h2 class="Project__title">Birou</h2>
@@ -206,6 +219,7 @@
 </script>
 <!-- build:js scripts/vendor.js -->
 <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/node_modules/slick-carousel/slick/slick.js"></script>
 <!-- endbuild -->
 <!-- build:js scripts/main.js -->
 <script src="scripts/main.js"></script>

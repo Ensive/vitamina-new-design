@@ -1,9 +1,24 @@
 .ContactWidget {
   position: fixed;
   display: block;
-  border-radius: 50%;
-  right: 136px;
+  left: calc(100vw - (100vw - 1010px) / 2);
   bottom: 88px;
+  cursor: pointer;
+  transform-origin: bottom;
+
+  &:hover {
+    overflow: visible;
+
+    .ContactWidget__button {
+      z-index: -1;
+    }
+
+      .ContactWidget__menu {
+      opacity: 1;
+      z-index: 1;
+      transform: scaleY(1);
+    }
+  }
 }
 
 .ContactWidget__button {
@@ -13,6 +28,7 @@
   width: 80px;
   outline: none;
   height: 80px;
+  z-index: 1;
   background: #F5F5F5 url("../images/dialog.svg") no-repeat center;
 }
 
@@ -27,12 +43,12 @@
   box-shadow: 0 10px 15px rgba($grey, 0.2);
   text-align: center;
   opacity: 0;
-  transition: opacity 0.3s;
-
-  &.is-active {
-    opacity: 1;
-  }
+  transform: scaleY(0);
+  transform-origin: bottom;
+  z-index: 0;
+  transition: transform 0.3s ease-out, opacity 0.4s;
 }
+
 // link
 .ContactWidget__link {
   width: 28px;

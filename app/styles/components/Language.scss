@@ -33,28 +33,30 @@
 }
 
 .Language__dropdown {
+  display: none;
   position: absolute;
-  transform: scaleY(0);
-  left: 7px;
-  top: 18px;
+  left: -2px;
+  top: 25px;
   transform-origin: top;
-  transition: transform 0.3s;
-
-  &.is-active {
-    transform: scaleY(1);
-  }
+  background: #fff;
+  width: 50px;
+  box-shadow: 6px 6px 16px lightgrey;
+  padding: 1px 18px 10px 9px;
+  border-radius: 10px;
+  //opacity: 0;
+  //height: 0;
 }
 
 .Language__link {
   display: block;
-  margin-top: 4px;
+  margin-top: 10px;
   color: $grey;
   text-decoration: none;
-  //font-weight: bold;
   font-size: 14px;
   transition: color 0.1s;
 
   &:hover {
-    color: $orange;
+    color: $black;
+    font-weight: bold;
   }
 }

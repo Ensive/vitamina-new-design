@@ -1,11 +1,11 @@
 .Content {
   position: relative;
-  padding: 90px 94px 47px;
+  padding: 60px 94px 47px;
 }
 
 .Content__title {
   max-width: 714px;
-  margin: 0 auto 50px;
+  margin: 0 auto 77px;
   text-align: center;
   font-size: 48px;
   line-height: 1.4;
@@ -16,21 +16,6 @@
   width: 901px;
   height: 424px;
   object-fit: cover;
-}
-
-.Content__slider {
-  position: relative;
-  margin:  0 auto;
-  max-width: 901px;
-
-  &::before {
-    content: '';
-    width: 100%;
-    max-width: 714px;
-    height: 1px;
-    background-color: $black;
-    bottom: -50px;
-  }
 }
 
 .Content__details {
@@ -46,9 +31,9 @@
 
 // text
 .Content__text {
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 18px;
-  line-height: 1.89;
+  line-height: 1.94;
 }
 
 .Content__text--underlined,
@@ -71,10 +56,10 @@
 // social
 .Content__links {
   position: absolute;
-  top: 793px;
+  top: 887px;
   width: 24px;
   height: 216px;
-  left: 90px;
+  left: 66px;
 }
 
 .Content__links--comunity {
@@ -89,7 +74,7 @@
   display: block;
   width: 24px;
   height: 24px;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
   transition: filter 0.2s;
 
   &:hover {
@@ -123,7 +108,7 @@
 }
 
 .Content__tags {
-  margin-top: 100px;
+  margin-top: 103px;
 }
 
 .Content__tag {
@@ -142,6 +127,7 @@
 .Content__tag--year {
   width: 88px;
   margin-left: auto;
+  margin-right: 0;
   float: right;
 }
 
@@ -227,9 +213,14 @@
   color: $black;
   display: block;
   text-decoration: none;
+  border: 1px solid transparent;
   transition: color 0.1s;
 
   &:hover {
-    color: $orange;
+    text-decoration: underline;
   }
+}
+
+.Content__contact--non-hover:hover {
+  text-decoration: none;
 }

@@ -1,0 +1,60 @@
+.Slider {
+  position: relative;
+  margin:  0 auto;
+  max-width: 901px;
+  padding-bottom: 100px;
+
+  &::before {
+    content: '';
+    width: 100%;
+    max-width: 714px;
+    height: 1px;
+    background-color: $black;
+    bottom: -100px;
+  }
+}
+
+.Slider__arrow {
+  position: absolute;
+  bottom: -55px;
+}
+
+.Slider__arrow {
+  position: absolute;
+  bottom: -75px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+
+  &:active,
+  &:focus {
+    box-shadow: 0 0 5px 2px rgba($orange, 0.8);
+  }
+}
+
+.Slider__arrow--next {
+  right: 0;
+  background: url("../images/next-arrow.svg") no-repeat center;
+}
+
+.Slider__arrow--prev {
+  left: 0;
+  background: url("../images/prev-arrow.svg") no-repeat center;
+}
+
+.Slider__state {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Slider__index {
+  font-size: 18px;
+}
+
+.Slider__index--current {
+  font-weight: bold;
+}

@@ -8,14 +8,14 @@
 // Project
 .Project {
   color:  $black;
+  position: relative;
   text-decoration: none;
   display: block;
   flex: 1 0 auto;
   max-width: 331px;
-  height: 400px;
+  height: 395px;
   margin-bottom: 46px;
   margin-right: 48px;
-  border: 4px solid transparent;
   cursor: pointer;
   transition: all 0.2s;
 
@@ -25,7 +25,13 @@
   }
 
   &.is-active {
-    border: 4px solid $orange;
+    &::before {
+      content: '';
+      position: absolute;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      border: 4px solid $orange;
+    }
   }
 
   &:nth-child(3n) {
@@ -73,7 +79,7 @@
 
 .Project__meta {
   border-top: 1px solid $grey;
-  padding: 20px 0;
+  padding: 16px 0;
   display: flex;
   justify-content: space-between;
 }

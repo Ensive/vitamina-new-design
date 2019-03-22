@@ -10,10 +10,10 @@
   font-weight: bold;
   font-size: 18px;
   border: 0;
-  transition: filter 0.1s;
+  transition: box-shadow 0.1s;
 
   &:hover {
-    filter: brightness(97%);
+    box-shadow: 0 3px 20px rgba($orange, 0.5);
   }
 }
 

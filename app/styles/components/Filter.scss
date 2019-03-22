@@ -10,13 +10,14 @@
 .Filter__label {
   font-weight: bold;
   font-size: 14px;
-  padding-left: 30px;
+  padding-left: 42px;
   background: url("../images/filter.svg") no-repeat left;
 }
 
 .Filter__items {
   width: 100%;
-  max-width: 640px;
+  max-width: 632px;
+  margin-right: 65px;
   display: flex;
   justify-content: space-between;
 }
