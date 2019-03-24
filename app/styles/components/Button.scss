@@ -3,14 +3,19 @@
   display: block;
   cursor: pointer;
   background: $orange;
-  width: 154px;
-  height: 56px;
+  width: 140px;
+  height: 48px;
   text-align: center;
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 18px;
   border: 0;
   transition: box-shadow 0.1s;
+
+  @media screen and (min-width: $max-md){
+    width: 154px;
+    height: 56px;
+  }
 
   &:hover {
     box-shadow: 0 3px 20px rgba($orange, 0.5);

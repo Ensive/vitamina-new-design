@@ -27,3 +27,23 @@ $(function () {
 });
 
 
+$(function () {
+  const $burgerBtn = $('.js-burger-btn');
+  const $burgerDropdown = $('.js-burger-dropdown');
+  const $burgerLink = $('.js-burger-link');
+  const $burgerFilters = $('.js-burger-filters');
+
+  $burgerBtn.on('click', toggleBurgerDropdown);
+  $burgerLink.on('click', toggleBurgerFilters);
+
+  function toggleBurgerDropdown() {
+    $(this).toggleClass('is-active');
+    $burgerDropdown.slideToggle();
+  }
+
+  function toggleBurgerFilters() {
+    $(this).toggleClass('is-active');
+    $(this).parent().toggleClass('is-active');
+    $burgerFilters.slideToggle();
+  }
+});

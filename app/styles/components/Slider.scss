@@ -2,26 +2,32 @@
   position: relative;
   margin:  0 auto;
   max-width: 901px;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
 
   &::before {
     content: '';
+    position: absolute;
     width: 100%;
     max-width: 714px;
     height: 1px;
     background-color: $black;
-    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+
+    @include media($max-md) {
+      bottom: -25px;
+    }
+  }
+
+  @include media($max-md) {
+    padding-bottom: 100px;
   }
 }
 
 .Slider__arrow {
   position: absolute;
-  bottom: -55px;
-}
-
-.Slider__arrow {
-  position: absolute;
-  bottom: -75px;
+  bottom: -45px;
   width: 32px;
   height: 32px;
   border: 0;
@@ -31,6 +37,10 @@
   &:active,
   &:focus {
     box-shadow: 0 0 5px 2px rgba($orange, 0.8);
+  }
+
+  @include media($max-md) {
+    bottom: -75px;
   }
 }
 

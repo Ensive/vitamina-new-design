@@ -12,6 +12,7 @@
   cursor: pointer;
   position: relative;
   outline: 0;
+  background: transparent;
 
   &.is-active {
 
@@ -43,8 +44,6 @@
   box-shadow: 6px 6px 16px lightgrey;
   padding: 1px 18px 10px 9px;
   border-radius: 10px;
-  //opacity: 0;
-  //height: 0;
 }
 
 .Language__link {
@@ -59,4 +58,7 @@
     color: $black;
     font-weight: bold;
   }
+}
+.Language--mobile {
+  margin-left: auto;
 }

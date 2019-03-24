@@ -1,0 +1,38 @@
+.BurgerMenu__dropdown {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  top: 104px;
+  left: 0;
+  z-index: 1;
+  padding: 16px;
+  height: calc(100vh - 104px);
+  background: $white;
+}
+
+.BurgerMenu__btn {
+  background: url("../images/burger.svg") no-repeat center;
+  width: 20px;
+  height: 14px;
+  border: 0;
+  margin-left: 30px;
+  transition: background 0.2s;
+
+  &.is-active {
+    background: url("../images/close.svg") no-repeat center;
+  }
+}
+
+.BurgerMenu__filters {
+  display: none;
+  padding: 0 32px 10px;
+}
+
+.BurgerMenu__item {
+  border: 2px solid transparent;
+  padding-top: 10px;
+
+  &.is-active {
+    border: 2px solid $orange;
+  }
+}

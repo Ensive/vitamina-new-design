@@ -3,6 +3,8 @@
 
 @import "base/colors";
 @import "base/fonts";
+@import "base/mixins";
+@import "base/screen-width";
 @import "base/Container";
 @import "base/common";
 
@@ -18,3 +20,4 @@
 @import "components/Language";
 @import "components/FIlter";
 @import "components/Slider";
+@import "components/BurgerMenu";

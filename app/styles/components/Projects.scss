@@ -3,6 +3,11 @@
   flex-wrap: wrap;
   margin-top: 47px;
   padding-bottom: 95px;
+  justify-content: space-around;
+
+  @include media($max-md) {
+    justify-content: flex-start;
+  }
 }
 
 // Project
@@ -12,12 +17,20 @@
   text-decoration: none;
   display: block;
   flex: 1 0 auto;
-  max-width: 331px;
   height: 395px;
-  margin-bottom: 46px;
-  margin-right: 48px;
+  margin-bottom: 15px;
+  max-width: 331px;
   cursor: pointer;
   transition: all 0.2s;
+
+  @include media($max-xs) {
+    margin: 0 10px 30px;
+  }
+
+  @include media($max-md) {
+    margin: 0 48px 40px 0;
+    flex: 0 1 auto;
+  }
 
   &:hover,
   &:focus {
@@ -52,10 +65,14 @@
 
 // Project info
 .Project__info {
-  padding: 10px 15px;
+  padding: 0 15px;
   position: relative;
   font-size: 14px;
   color: $grey;
+
+  @include media($max-sm) {
+    padding: 10px 15px;
+  }
 }
 
 .Project__title {

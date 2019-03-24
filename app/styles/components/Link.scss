@@ -39,8 +39,6 @@
       transform: scaleX(1);
     }
   }
-
-  &.is-active {}
 }
 
 .Link.Link--filter {
@@ -67,5 +65,41 @@
 }
 
 .Link.Link--block {
+  display: block;
+}
+
+.Link--burger {
+  display: block;
+  margin-bottom: 15px;
+  padding: 16px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: url("../images/burger-arrow.svg") no-repeat center;
+    top: 50%;
+    right: 20px;
+    width: 8px;
+    height: 16px;
+    transform: rotate(0) translateY(-50%);
+    transform-origin: top;
+    transition: transform 0.4s;
+  }
+
+  &.is-active {
+    border: 0!important;
+
+    &::after {
+      transform: rotate(90deg) translateY(-50%);
+    }
+  }
+
+  &:hover::before {
+    display: none;
+  }
+}
+
+.Link--burger-filter {
   display: block;
 }

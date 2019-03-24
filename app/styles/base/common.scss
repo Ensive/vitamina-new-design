@@ -2,9 +2,17 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 14px;
+
+  @include media($max-md) {
+    font-size: 16px;
+  }
+}
+
 body {
   max-width: 100%;
-  overflow-x: hidden;
+  //overflow: hidden;
   color: $black;
   font-family: 'Open Sans', sans-serif;
   background-color: $white;
