@@ -96,6 +96,9 @@
 .Content__links--project {
   top: 515px;
 
+  @include media($max-md) {
+    top: 887px;
+  }
 }
 
 .Content__links--comunity {

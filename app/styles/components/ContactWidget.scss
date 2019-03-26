@@ -1,8 +1,8 @@
 .ContactWidget {
   position: fixed;
   display: block;
-  left: calc(100vw - (100vw - 1010px) / 2);
-  bottom: 88px;
+  right: 15px;
+  bottom: 15px;
   cursor: pointer;
   transform-origin: bottom;
 
@@ -18,6 +18,12 @@
       z-index: 1;
       transform: scaleY(1);
     }
+  }
+
+  @include media($max-md) {
+    right: auto;
+    left: calc(100vw - (100vw - 1010px) / 2);
+    bottom: 88px;
   }
 }
 

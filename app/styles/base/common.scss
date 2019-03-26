@@ -20,6 +20,12 @@ body {
   animation: opacity 1s;
 }
 
+main {
+  @include media($max-md) {
+    padding-top: 190px!important;
+  }
+}
+
 @keyframes opacity {
   0% {
     opacity: 0;
