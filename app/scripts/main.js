@@ -31,19 +31,37 @@ $(function () {
   const $burgerBtn = $('.js-burger-btn');
   const $burgerDropdown = $('.js-burger-dropdown');
   const $burgerLink = $('.js-burger-link');
+  const $filter = $('.js-filter');
   const $burgerFilters = $('.js-burger-filters');
+  const $resetFilterBtn = $('.js-filter-reset');
 
   $burgerBtn.on('click', toggleBurgerDropdown);
   $burgerLink.on('click', toggleBurgerFilters);
+  $resetFilterBtn.on('click', resetFilters);
+  $filter.on('click', addFilter);
 
   function toggleBurgerDropdown() {
     $(this).toggleClass('is-active');
-    $burgerDropdown.slideToggle();
+    $burgerDropdown.slideToggle()
   }
 
   function toggleBurgerFilters() {
     $(this).toggleClass('is-active');
+    $burgerFilters.slideUp();
+    $burgerLink.parent().removeClass('is-active');
     $(this).parent().toggleClass('is-active');
-    $burgerFilters.slideToggle();
+    $(this).next().slideToggle();
+  }
+
+  function addFilter() {
+    $filter.removeClass('is-active');
+    $(this).toggleClass('is-active');
+
+    $burgerDropdown.slideUp();
+    $burgerBtn.removeClass('is-active');
+  }
+
+  function resetFilters() {
+    $filter.removeClass('is-active');
   }
 });
