@@ -3,11 +3,19 @@ $(function () {
   const $langMenu = $('.js-language-menu');
 
   $langBtn.on('click', toggleLangMenu);
+  $(document).on('mouseup', handleDocumentClick);
 
   function toggleLangMenu(e) {
     e.preventDefault();
     $(this).toggleClass('is-active');
     $langMenu.slideToggle();
+  }
+
+  function handleDocumentClick(e) {
+    console.log('s')
+    if ($(document).has(e.target).length === 0) {
+      $langMenu.removeClass('is-active');
+    }
   }
 
   $('.js-slides-count').text($('.js-slide').length);
@@ -46,11 +54,12 @@ $(function () {
   }
 
   function toggleBurgerFilters() {
-    $(this).toggleClass('is-active');
     $burgerFilters.slideUp();
+    $burgerLink.removeClass('is-active');
     $burgerLink.parent().removeClass('is-active');
+    $(this).toggleClass('is-active');
     $(this).parent().toggleClass('is-active');
-    $(this).next().slideToggle();
+    $(this).next().stop().slideToggle();
   }
 
   function addFilter() {
