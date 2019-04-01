@@ -42,7 +42,7 @@
     "start": "gulp serve",
     "build": "cross-env NODE_ENV=production gulp",
     "test": "npm run serve:test",
-    "deploy": "push-dir --dir=dist --branch=gh-pages",
+    "deploy": "npm run build && push-dir --dir=dist --branch=gh-pages",
     "tasks": "gulp --tasks"
   },
   "browserslist": [
