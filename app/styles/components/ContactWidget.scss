@@ -39,6 +39,7 @@
 }
 
 .ContactWidget__menu{
+  display: none;
   position: absolute;
   bottom: 0;
   width: 80px;
@@ -48,11 +49,15 @@
   padding: 32px 0;
   box-shadow: 0 10px 15px rgba($grey, 0.2);
   text-align: center;
-  opacity: 0;
-  transform: scaleY(0);
   transform-origin: bottom;
   z-index: 0;
   transition: transform 0.3s ease-out, opacity 0.4s;
+
+  @include media($max-md) {
+    display: block;
+    opacity: 0;
+    transform: scaleY(0);
+  }
 }
 
 // link

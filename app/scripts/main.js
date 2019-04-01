@@ -74,3 +74,11 @@ $(function () {
     $filter.removeClass('is-active');
   }
 });
+
+if ($(window).width() < 768) {
+  $('.js-widget-button').on('click', closeMenu);
+
+  function closeMenu() {
+    $('.js-widget-menu').stop().slideToggle();
+  }
+}
