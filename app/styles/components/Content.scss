@@ -78,17 +78,21 @@
 // social
 .Content__links {
   position: absolute;
-  height: 216px;
+  z-index: 1;
   width: 100%;
   display: flex;
-  left: 0;
-  justify-content: space-around;
-  top: 420px;
+  justify-content: space-between;
+  max-width: 200px;
+  bottom: 75px;
+  left: 10px;
 
   @include media($max-md) {
+    height: 216px;
     top: 887px;
     left: 66px;
     width: 24px;
+    bottom: auto;
+    max-width: none;
     display: block;
   }
 }
@@ -232,15 +236,19 @@
 .Content__download {
   width: 100%;
   border: 2px solid $orange;
-  margin-top: 5px;
   padding: 10px 20px 10px 10px;
   position: relative;
   font-size: 13px;
   text-align: left;
   cursor: pointer;
+  margin-top: 65px;
   background: $white;
   font-family: "Open Sans", sans-serif;
   transition: background-color 0.2s;
+
+  @include media($max-md) {
+    margin-top: 5px;
+  }
 
   &:hover {
     background-color: rgba($orange, 0.2);

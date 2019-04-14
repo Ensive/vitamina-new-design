@@ -6,7 +6,7 @@
   width: 100%;
   top: 90px;
   z-index: 2;
-  background: $white;
+  background: rgba($white, 0.95);
 
   @include media($max-md) {
     display: block;

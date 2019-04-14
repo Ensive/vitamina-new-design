@@ -12,7 +12,6 @@ $(function () {
   }
 
   function handleDocumentClick(e) {
-    console.log('s')
     if ($(document).has(e.target).length === 0) {
       $langMenu.removeClass('is-active');
     }
@@ -65,9 +64,11 @@ $(function () {
   function addFilter() {
     $filter.removeClass('is-active');
     $(this).toggleClass('is-active');
-
+    $burgerLink.removeClass('is-active');
     $burgerDropdown.slideUp();
     $burgerBtn.removeClass('is-active');
+    $burgerFilters.slideUp();
+    $(this).parents().removeClass('is-active');
   }
 
   function resetFilters() {
@@ -82,3 +83,21 @@ if ($(window).width() < 768) {
     $('.js-widget-menu').stop().slideToggle();
   }
 }
+
+$(function () {
+  const $modalTrigger = $('.js-modal-success');
+  const $modal = $('.js-modal');
+  const $modalClose = $('.js-close-modal');
+
+  $modalTrigger.on('click', showModal);
+  $modalClose.on('click', hideModal);
+
+  function showModal(e) {
+    e.preventDefault();
+    $modal.fadeIn();
+  }
+
+  function hideModal() {
+    $modal.fadeOut();
+  }
+});
