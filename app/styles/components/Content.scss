@@ -35,7 +35,7 @@
 .Content__details {
   max-width: 714px;
   width: 100%;
-  margin: 120px auto 0;
+  margin: 80px auto 0;
 
   @include media($max-md) {
     margin: 90px auto 0;
@@ -83,7 +83,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  max-width: 200px;
+  max-width: 130px;
   bottom: 75px;
   left: 10px;
 
@@ -99,8 +99,6 @@
 }
 
 .Content__links--project {
-  top: 515px;
-
   @include media($max-md) {
     top: 887px;
   }
@@ -111,7 +109,7 @@
   justify-content: space-between;
   position: static;
   width: 100%;
-  max-width: 190px;
+  max-width: 150px;
   margin: 0 auto;
 
   @include media($max-md) {
