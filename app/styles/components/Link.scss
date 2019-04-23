@@ -108,3 +108,13 @@
 .Link--burger-filter {
   display: block;
 }
+
+.Link.Link--underlined {
+  color: $black;
+  border-bottom: 2px $orange solid;
+  transition: color 0.1s;
+
+  &:hover {
+    color: $orange;
+  }
+}
