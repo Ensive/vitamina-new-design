@@ -83,8 +83,7 @@
   display: flex;
   justify-content: space-between;
   max-width: 130px;
-  bottom: 75px;
-  left: 10px;
+  bottom: 40px;
 
   @include media($max-md) {
     height: 216px;
