@@ -4,15 +4,15 @@
   position: relative;
 
   @include media($max-md) {
-    margin: 32px 0 130px;
+    margin: 0 0 152px;
   }
 }
 
 .Window__close {
   background: url("../images/close.svg") no-repeat center;
   border: 0;
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   position: absolute;
   z-index: 1;
   top: 15px;

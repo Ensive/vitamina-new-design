@@ -17,7 +17,7 @@
 
   @include media($max-md) {
     font-size: 48px;
-    margin: 0 auto 77px;
+    margin: 2px auto 77px;
   }
 }
 
@@ -35,7 +35,8 @@
 .Content__details {
   max-width: 714px;
   width: 100%;
-  margin: 120px auto 0;
+  position: relative;
+  margin: 80px auto 0;
 
   @include media($max-md) {
     margin: 90px auto 0;
@@ -48,7 +49,7 @@
 
 .Content__subtitle {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 // text
@@ -58,7 +59,6 @@
   line-height: 1.94;
 }
 
-.Content__text--underlined,
 .Meta__link {
   color: $black;
   text-decoration: none;
@@ -82,26 +82,17 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  max-width: 200px;
-  bottom: 75px;
-  left: 10px;
+  max-width: 130px;
+  bottom: 40px;
 
   @include media($max-md) {
     height: 216px;
-    top: 887px;
-    left: 66px;
+    top: 9px;
+    left: -121px;
     width: 24px;
     bottom: auto;
     max-width: none;
     display: block;
-  }
-}
-
-.Content__links--project {
-  top: 515px;
-
-  @include media($max-md) {
-    top: 887px;
   }
 }
 
@@ -110,7 +101,7 @@
   justify-content: space-between;
   position: static;
   width: 100%;
-  max-width: 190px;
+  max-width: 150px;
   margin: 0 auto;
 
   @include media($max-md) {
@@ -159,7 +150,7 @@
   margin-top: 30px;
 
   @include media($max-md) {
-    margin-top: 103px;
+    margin-top: 107px;
   }
 }
 
@@ -206,7 +197,7 @@
 
 .Meta__item {
   border-top: 1px solid $black;
-  padding: 25px 0;
+  padding: 25px 0 27px;
   font-size: 1.125rem;
 }
 
@@ -246,10 +237,6 @@
   font-family: "Open Sans", sans-serif;
   transition: background-color 0.2s;
 
-  @include media($max-md) {
-    margin-top: 5px;
-  }
-
   &:hover {
     background-color: rgba($orange, 0.2);
   }
@@ -274,7 +261,7 @@
   @include media($max-md) {
     padding: 38px 24px;
     font-size: 18px;
-    margin-top: 60px;
+    margin-top: 56px;
   }
 }
 

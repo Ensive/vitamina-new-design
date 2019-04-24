@@ -21,7 +21,7 @@
   }
 
   @include media($max-md) {
-    padding-bottom: 100px;
+    padding-bottom: 99px;
   }
 }
 
@@ -40,23 +40,31 @@
   }
 
   @include media($max-md) {
-    bottom: -75px;
+    bottom: -86px;
   }
 }
 
 .Slider__arrow--next {
   right: 0;
   background: url("../images/next-arrow.svg") no-repeat center;
+
+  @include media($max-md) {
+    right: 94px;
+  }
 }
 
 .Slider__arrow--prev {
   left: 0;
   background: url("../images/prev-arrow.svg") no-repeat center;
+
+  @include media($max-md) {
+    left: 94px;
+  }
 }
 
 .Slider__state {
   position: absolute;
-  bottom: 30px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
 }

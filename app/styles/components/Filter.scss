@@ -46,11 +46,17 @@
 
 .Filter__reset {
   border: 0;
-  background: url("../images/reset-filter.svg") no-repeat center;
-  width: 28px;
-  height: 20px;
+  background: url("../images/close.svg") no-repeat center;
+  width: 16px;
+  height: 16px;
   cursor: pointer;
   transition: transform 0.2s;
+
+  @media screen and (min-width: $max-sm){
+    width: 28px;
+    height: 20px;
+    background: url("../images/reset-filter.svg") no-repeat center;
+  }
 
   &:hover {
     transform: scale(1.15);
