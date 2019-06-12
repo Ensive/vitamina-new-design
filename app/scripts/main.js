@@ -1,3 +1,4 @@
+//lang
 $(function () {
   const $langBtn = $('.js-language-btn');
   const $langMenu = $('.js-language-menu');
@@ -16,15 +17,18 @@ $(function () {
       $langMenu.removeClass('is-active');
     }
   }
+});
 
+//slider
+$(function () {
   $('.js-slides-count').text($('.js-slide').length);
 
   if ($('.js-slider').length) {
     $('.js-slider').slick({
       autoplay: 5000,
       pauseOnHover: true,
-      prevArrow: '<button class="Slider__arrow Slider__arrow--prev"></button>',
-      nextArrow: '<button class="Slider__arrow Slider__arrow--next"></button>',
+      prevArrow: '<button class="Slider__arrow Slider__arrow--prev"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 24L12 16L20 8" stroke="black" stroke-width="2"/></svg></button>',
+      nextArrow: '<button class="Slider__arrow Slider__arrow--next"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8L20 16L12 24" stroke="black" stroke-width="2"/></svg></button>',
     });
 
     $('.js-slider').on('afterChange', changeIndex);
@@ -35,7 +39,7 @@ $(function () {
   }
 });
 
-
+//burger and filters
 $(function () {
   const $burgerBtn = $('.js-burger-btn');
   const $burgerDropdown = $('.js-burger-dropdown');
@@ -78,6 +82,7 @@ $(function () {
   }
 });
 
+//widget
 if ($(window).width() < 768) {
   $('.js-widget-button').on('click', closeMenu);
 
@@ -86,6 +91,7 @@ if ($(window).width() < 768) {
   }
 }
 
+//modal
 $(function () {
   const $modalTrigger = $('.js-modal-success');
   const $modal = $('.js-modal');

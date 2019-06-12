@@ -31,12 +31,48 @@
   width: 32px;
   height: 32px;
   border: 0;
-  outline: 0;
+  padding: 0;
   cursor: pointer;
 
-  &:active,
-  &:focus {
-    box-shadow: 0 0 5px 2px rgba($orange, 0.8);
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  &::before {
+    z-index: 1;
+    background: $black;
+    width: 0;
+    transition: 0.15s ease-in;
+  }
+
+  &::after {
+    background: #F5F5F5;
+    z-index: 0;
+  }
+
+  svg {
+    position: relative;
+    z-index: 3;
+  }
+
+  path {
+    transition: color 0.15s ease-in;
+  }
+
+    &:hover {
+    path {
+      stroke: $white;
+    }
+
+    &::before {
+      width: 100%;
+    }
   }
 
   @include media($max-md) {
@@ -46,7 +82,7 @@
 
 .Slider__arrow--next {
   right: 0;
-  background: url("../images/next-arrow.svg") no-repeat center;
+  //background: url("../images/next-arrow.svg") no-repeat center;
 
   @include media($max-md) {
     right: 94px;
@@ -55,10 +91,15 @@
 
 .Slider__arrow--prev {
   left: 0;
-  background: url("../images/prev-arrow.svg") no-repeat center;
+  //background: url("../images/prev-arrow.svg") no-repeat center;
 
   @include media($max-md) {
     left: 94px;
+  }
+
+  &::before {
+    right: 0;
+    left: auto;
   }
 }
 
